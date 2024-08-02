@@ -1,0 +1,18 @@
+mport time
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+def send_reminder():
+    # Logic for sending reminders via WhatsApp
+    # Replace this part with your actual WhatsApp API integration
+
+    # Example: Print a reminder message
+    print("Reminder: Meeting at 3:00 PM via WhatsApp")
+
+# Create a scheduler
+scheduler = BlockingScheduler()
+
+# Schedule reminders daily at 3:00 PM
+scheduler.add_job(send_reminder, 'cron', hour=15)
+
+# Start the scheduler
+scheduler.start(
